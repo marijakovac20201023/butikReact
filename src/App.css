@@ -1,3 +1,4 @@
+/*za navig. meni*/
 .navbar{
   display: flex;
   flex-direction: row;
@@ -22,3 +23,43 @@
   text-decoration: none;
   color: antiquewhite;
 }
+
+
+/*za futer*/
+
+.footer {
+     
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+ ; background-color: #1B4965;
+  
+  
+}
+
+.footer > div {
+  background-color: #1B4965;;
+  color: white;
+  text-align: center;
+
+  font-size: 15px;
+  text-align: center;
+}
+.footer > .footerItemRight{
+  background-color: #40add8;;;
+}
+.footer ul{
+  list-style-type: none;
+}
+.footer a{
+  text-decoration: none;
+  color: white;
+
+}
+.footer a:hover{
+  color:#f2dda4;
+
+}
+
+
+ 
