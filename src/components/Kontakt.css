@@ -1,14 +1,8 @@
  
  
-  
-  html, body {
-    height: 100vh;
-    
-    font-family: 'Balsamiq Sans', sans-serif;
-  }
-  
  
-  .card {
+ 
+  .cardKontakt {
     width: 70%;
     padding: 10px 10px 90px 90px; 
     margin: 100px;
@@ -19,13 +13,13 @@
    
   }
   
-  .card h2 {
+  .cardKontakt h2 {
     color: rgba(0, 0, 0, 0.3);
     font-size: 60px;
     text-transform: uppercase;
   }
   
-  .card .row {
+  .cardKontakt .row {
     position: relative;
     width: 100%;
     display: grid;
@@ -34,23 +28,23 @@
     grid-gap: 30px;
   }
   
-  .card .row .col {
+  .cardKontakt .row .col {
     position: relative;
     width: 100%;
     margin: 30px 20px 40px 0;
     transition: 0.5s;
   }
   
-  .card .row .form-group {
+  .cardKontakt .row .form-group {
     position: relative;
     width: 100%;
     height: 40px;
     color: #ffffff;
   }
   
-  .card .row .form-group input,
-  .card .row .form-group textarea ,
-  .card .row .form-group select
+  .cardKontakt .row .form-group input,
+  .cardKontakt .row .form-group textarea ,
+  .cardKontakt .row .form-group select
  {
     position: absolute;
     width: 90%;
@@ -65,7 +59,7 @@
     border-radius: 50px;
   }
   
-  .card .row .form-group label {
+  .cardKontakt .row .form-group label {
     line-height: 40px;
      color: #666666;
     font-size: 24px;
@@ -78,13 +72,13 @@
     margin-top: 64px;
   }
   
-  .card .row .form-group input:focus,
-  .card .row .form-group textarea:focus {
+  .cardKontakt .row .form-group input:focus,
+  .cardKontakt .row .form-group textarea:focus {
     border: 5px solid #BEE9E8;
     transition: all 0.5s;
   }
   
-  .card .row input[type="submit"] {
+  .cardKontakt .row input[type="submit"] {
     border: 5px solid rgba(0, 0, 0, 0.3);
     box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
     padding: 10px;
@@ -102,26 +96,26 @@
     transition: all 0.4s;
   }
   
-  .card .row input[type="submit"]:hover {
+  .cardKontakt .row input[type="submit"]:hover {
     border: 5px solid rgba(255, 255, 255, 1);
     color: #ffffff;
     transition: all 0.4s;
   }
   
   @media screen and (max-width: 900px) {
-    .card .row {
+    .cardKontakt .row {
       grid-template-columns: repeat(auto-fit,minmax(70%, 1fr));
     }
     
-    .card {
+    .cardKontakt {
       padding: 20px;
     }
     
-    .card h2 {
+    .cardKontakt h2 {
       font-size: 34px;
     }
     
-    .card .row input[type="submit"] {
+    .cardKontakt .row input[type="submit"] {
       width: 100%;
     }
   }

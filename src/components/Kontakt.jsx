@@ -3,7 +3,7 @@ import './Kontakt.css';
 function Kontakt() {
   return (
     <div>      
-        <div className="card">
+        <div className="cardKontakt">
     <h2>Contact Us</h2>
     <div className="row">
       <div className="col">

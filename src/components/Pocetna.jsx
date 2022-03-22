@@ -1,8 +1,9 @@
 import React from 'react'
-
+import Proizvod from './Proizvod'
+import './Proizvod.css';
 function Pocetna() {
   return (
-    <div>Pocetna</div>
+    <div><Proizvod></Proizvod></div>
   )
 }
 
