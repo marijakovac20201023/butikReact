@@ -1,9 +1,17 @@
 import React from 'react'
 import Proizvod from './Proizvod'
 import './Proizvod.css';
-function Pocetna() {
-  return (
-    <div><Proizvod></Proizvod></div>
+const Pocetna = ({proizvodi}) =>{ 
+   return (
+    <div className='ponuda'>
+
+        {proizvodi.map((p)=>(
+                <Proizvod proizvod={p}></Proizvod>
+        ))}
+
+
+
+    </div>
   )
 }
 

@@ -62,4 +62,14 @@
 }
 
 
- 
+ /*za str. pocetna*/
+ .ponuda{
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:9%;
+  margin-top: 50px;
+  justify-content: space-between;
+
+ }
