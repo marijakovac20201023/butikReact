@@ -13,12 +13,13 @@ body {
 
 .image {
     position: absolute;
+  
     right: 12px;
     top: 10px
 }
 
 .main-heading {
-    font-size: 40px;
+    font-size: 30px;
     color: red !important
 }
 
