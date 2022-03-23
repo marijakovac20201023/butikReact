@@ -7,7 +7,8 @@ body {
 }
 
 .card {
-    width: 350px;
+    
+    width: 450px;
     height: 370px
 }
 
@@ -23,9 +24,7 @@ body {
     color: red !important
 }
 
-.ratings i {
-    color: orange
-}
+ 
 
 .user-ratings h6 {
     margin-top: 2px
@@ -65,3 +64,16 @@ body {
     height: 48px;
     font-size: 18px
 }
+
+ /*za str. pocetna*/
+ .ponuda{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:9%;
+    margin-top: 10px;
+    padding: 0%;
+    justify-content: space-between;
+  
+   }

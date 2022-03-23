@@ -69,7 +69,17 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin:9%;
-  margin-top: 50px;
+  margin-top: 10px;
+  padding: 0%;
   justify-content: space-between;
 
  }
+
+
+
+
+ /*za dugmice na pocetnoj*/
+ /*za dugmice za sortiranje*/
+.buttons{
+  margin-left:15%;
+}
