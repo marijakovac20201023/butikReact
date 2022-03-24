@@ -1,6 +1,6 @@
 import React from 'react'
 import './Proizvod.css';
-function Proizvod({proizvod}) {
+function Proizvod({proizvod,dodajUKorpu}) {
   return (
     <div><div className="height d-flex justify-content-center align-items-center">
     <div className="card p-3">
@@ -19,7 +19,7 @@ function Proizvod({proizvod}) {
         <div className="d-flex justify-content-between align-items-center mt-2 mb-2"> <span>Available colors</span>
             <div className="colors"> <span></span> <span></span> <span></span> <span></span> </div>
         </div>
-        <p>{proizvod.opis} </p> <button className="btn btn-danger">Add to cart</button>
+        <p>{proizvod.opis} </p> <button className="btn btn-danger" onClick={()=>dodajUKorpu(proizvod.id)}>Add to cart</button>
     </div>
 </div></div>
   )

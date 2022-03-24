@@ -10,8 +10,8 @@ function NavBar() {
 
         <Link to="/kontakt" className='navbar-items'>  Kontakt </Link>
         
-        <Link to="/login" className='navbar-items'> Login </Link>
-        <Link to="/register" className='navbar-items'> Registruj se </Link>
+        <Link to="/korpa" className='navbar-items'> Korpa </Link>
+       
         
      </div>
   )

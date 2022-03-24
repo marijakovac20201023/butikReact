@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Proizvod from './Proizvod'
 import './Proizvod.css';
-const Pocetna = ({proizvodi}) =>{ 
+const Pocetna = ({proizvodi,dodajUKorpu}) =>{ 
   const [sort,setSort] = useState(true);
   function sortAsc(){
        setSort(true);
@@ -23,7 +23,7 @@ const Pocetna = ({proizvodi}) =>{
                     {proizvodi
                     .sort((a,b) => a.cena <  b.cena ? -1: 1)
                     .map((p)=>(
-                        <Proizvod proizvod={p} key={p.id}></Proizvod>
+                        <Proizvod proizvod={p} key={p.id} dodajUKorpu={dodajUKorpu}></Proizvod>
                  ))}
             </>
         
@@ -32,7 +32,7 @@ const Pocetna = ({proizvodi}) =>{
               {proizvodi
                 .sort((a,b) => a.cena <  b.cena ? 1: -1)
                 .map((p)=>(
-                    <Proizvod proizvod={p} key={p.id}></Proizvod>
+                    <Proizvod proizvod={p} key={p.id} dodajUKorpu={dodajUKorpu}></Proizvod>
             ))}
         </>
         
@@ -40,7 +40,7 @@ const Pocetna = ({proizvodi}) =>{
         }
 
         {proizvodi.map((p)=>(
-                <Proizvod proizvod={p}></Proizvod>
+                <Proizvod proizvod={p}  key={p.id} ></Proizvod>
         ))}
 
 

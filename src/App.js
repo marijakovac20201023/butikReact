@@ -8,9 +8,31 @@ import Pocetna from './components/Pocetna';
 import Kontakt from './components/Kontakt';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
+import Korpa from './components/Korpa';
 
 function App() {
-  const [proizvodi]= useState([
+
+  //niz proizvoda koji su u korpi
+  const [uKorpi,setUKorpi] = useState([]);
+  const [brProzivoda,setBrProizvoda] = useState(0);
+  function osvezi(){
+    let nizProizvodaUKorpi = proizvodi.filter((p) =>p.kolicina>0);
+    setUKorpi(nizProizvodaUKorpi);
+  }
+  function dodajUKorpu(id){
+        setBrProizvoda(brProzivoda+1);
+
+        proizvodi.forEach((p)=>{
+           
+          if(p.id===id){
+              p.kolicina++;
+          }
+        })
+     osvezi();
+    
+
+  }
+  const [proizvodi]= useState([ //niz proizvoda u ponudi
         {
             id:1,
             slika: "https://static.vesti.rs/slike-3/Internet-prodaja-odece-prevara-ili-ne.jpg",
@@ -19,6 +41,7 @@ function App() {
             velicina: "S",
             opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
             cena: 100,
+            kolicina:0
         },
         {
           id:2,
@@ -28,6 +51,7 @@ function App() {
           velicina: "34",
           opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
           cena: 200,
+          kolicina:0
         },
         {
           id:3,
@@ -37,6 +61,7 @@ function App() {
           velicina: "S",
           opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
           cena: 600,
+          kolicina:0
        },
        {
         id:4,
@@ -46,6 +71,7 @@ function App() {
         velicina: "S",
         opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
         cena: 160,
+        kolicina:0
     },
     {
       id:5,
@@ -55,6 +81,7 @@ function App() {
       velicina: "34",
       opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
       cena: 260,
+      kolicina:0
     },
     {
       id:6,
@@ -64,6 +91,7 @@ function App() {
       velicina: "S",
       opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
       cena: 170,
+      kolicina:0
    },
 
   ]);
@@ -74,8 +102,9 @@ function App() {
           <NavBar></NavBar>
 
         <Routes>
-            <Route path="/" element={<Pocetna proizvodi={proizvodi}></Pocetna>}></Route>
+            <Route path="/" element={<Pocetna proizvodi={proizvodi} dodajUKorpu={dodajUKorpu}></Pocetna>}></Route>
             <Route path="/kontakt" element={<Kontakt></Kontakt>}></Route>
+            <Route path="/korpa" element={ <Korpa uKorpi={uKorpi}></Korpa>}></Route>
         </Routes>
           <Footer> </Footer>
       </BrowserRouter>
