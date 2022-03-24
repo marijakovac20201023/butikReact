@@ -2,7 +2,7 @@ import React from 'react'
 import {BsPlusLg, BsDashLg} from "react-icons/bs"
 function ProizvodUKorpi({proizvod,dodajUKorpu, izbaciIzKorpe}) {
   return (
-    <div>
+    <div className='proizvodUkorpicard'>
         <h3>Naziv: {proizvod.naziv}</h3>
         <p>CENA:   {proizvod.cena} </p>
         <p>KOLICINA:   {proizvod.kolicina} </p>
@@ -11,7 +11,7 @@ function ProizvodUKorpi({proizvod,dodajUKorpu, izbaciIzKorpe}) {
         <button
                   className="btn"
                    onClick={()=> dodajUKorpu(proizvod.id)}
-                >
+                >  
                 <BsPlusLg />
               </button>
               <button 

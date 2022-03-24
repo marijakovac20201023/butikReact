@@ -17,6 +17,7 @@ function App() {
   const [ukupnaCena,setUkupnaCena] = useState(0);
   const [brProzivoda,setBrProizvoda] = useState(0);
   function osvezi(){
+    
     let nizProizvodaUKorpi = proizvodi.filter((p) =>p.kolicina>0);
     setUKorpi(nizProizvodaUKorpi);
     izracunajUkupnuCenu();
@@ -28,9 +29,11 @@ function App() {
            
           if(p.id===id){
               p.kolicina++;
+              p.ukupno=p.cena*p.kolicina
+              osvezi();
           }
         })
-     osvezi();
+     
     
 
   }
@@ -41,17 +44,22 @@ function App() {
        
       if(p.id===id){
           p.kolicina--;
+          p.ukupno=p.cena*p.kolicina
+          osvezi();
       }
     })
- osvezi();
+
 
 
 }
   function izracunajUkupnuCenu(){
-    setUkupnaCena(0)
+   
+   
     proizvodi.forEach((p)=>{
+            
            if(p.kolicina>0){
-            setUkupnaCena(ukupnaCena+p.cena*p.kolicina)
+             
+                setUkupnaCena(ukupnaCena+p.ukupno)
            }
           
     })
@@ -61,11 +69,12 @@ function App() {
             id:1,
             slika: "https://static.vesti.rs/slike-3/Internet-prodaja-odece-prevara-ili-ne.jpg",
             prodavnica: "ZARA",
-            naziv: "komplet",
+            naziv: "komplet S",
             velicina: "S",
             opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
             cena: 100,
-            kolicina:0
+            kolicina:0, 
+            ukupno:0
         },
         {
           id:2,
@@ -75,7 +84,8 @@ function App() {
           velicina: "34",
           opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
           cena: 200,
-          kolicina:0
+          kolicina:0,
+          ukupno:0
         },
         {
           id:3,
@@ -85,17 +95,19 @@ function App() {
           velicina: "S",
           opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
           cena: 600,
-          kolicina:0
+          kolicina:0,
+          ukupno:0
        },
        {
         id:4,
         slika: "https://static.vesti.rs/slike-3/Internet-prodaja-odece-prevara-ili-ne.jpg",
         prodavnica: "ZARA",
-        naziv: "komplet",
-        velicina: "S",
+        naziv: "komplet M",
+        velicina: "M",
         opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
         cena: 160,
-        kolicina:0
+        kolicina:0,
+        ukupno:0
     },
     {
       id:5,
@@ -105,7 +117,8 @@ function App() {
       velicina: "34",
       opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
       cena: 260,
-      kolicina:0
+      kolicina:0,
+      ukupno:0
     },
     {
       id:6,
@@ -115,7 +128,8 @@ function App() {
       velicina: "S",
       opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
       cena: 170,
-      kolicina:0
+      kolicina:0,
+      ukupno:0
    },
 
   ]);

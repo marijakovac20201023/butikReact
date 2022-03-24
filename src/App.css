@@ -83,3 +83,59 @@
 .buttons{
   margin-left:15%;
 }
+
+
+
+
+
+/*kartice za proizvode u korpi*/
+.proizvodUkorpicard{
+  border: solid 2px black;
+  border-radius: 5px;
+  box-shadow: 5px 10px #888888;
+  padding: 10px;
+  margin-left: 100px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 25%;
+}
+
+.naslovKorpa{
+  text-align: center;
+}
+
+.ukupno{
+  background-color: rgb(40, 236, 40);
+  padding: 30px;
+  margin-left: 70%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 5%;
+  font-size: 30px;
+}
+
+.praznaKorpa{
+  margin: 8%;
+  border: solid 2px black;
+  border-radius: 5px;
+  box-shadow: 5px 10px #888888;
+  padding: 50px;
+  text-align: center;
+  
+}
+.btn {
+  background-color: rgb(185, 228, 68);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 3px;
+  border-radius: 3px;
+  border-width: 0px;
+}
+
+.btn:hover{
+  background-color: #5ebfaa;
+
+}
