@@ -10,11 +10,24 @@ const Pocetna = ({proizvodi,dodajUKorpu}) =>{
     setSort(false);
 }
    return (
+     <div>
+
+      <div className='zaglavlje'>
+            <br /><br />   
+            <hr />
+         <h1 className='naslovKorpa'>Nasa ponuda  </h1>
+         <hr />
+         <br /><br /> 
+        </div>
+
+
+     <div className="buttons">
+              <button className="sortbtn btn" onClick={sortAsc}>Sortiraj rastuće</button>
+              <button className="sortbtn btn" onClick={sortDesc}>Sortiraj opadajuće</button>
+              <br /><br />
+        </div>
     <div className='ponuda'>
-        <div className="buttons">
-        <button className="sortbtn btn" onClick={sortAsc}>Sortiraj rastuće</button>
-        <button className="sortbtn btn" onClick={sortDesc}>Sortiraj opadajuće</button>
-      </div>
+        
 
 
       
@@ -39,13 +52,11 @@ const Pocetna = ({proizvodi,dodajUKorpu}) =>{
         
         }
 
-        {proizvodi.map((p)=>(
-                <Proizvod proizvod={p}  key={p.id} ></Proizvod>
-        ))}
+   
 
 
 
-    </div>
+    </div></div>
   )
 }
 

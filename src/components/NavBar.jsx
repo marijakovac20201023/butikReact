@@ -10,7 +10,7 @@ function NavBar() {
 
         <Link to="/kontakt" className='navbar-items'>  Kontakt </Link>
         
-        <Link to="/korpa" className='navbar-items'> Korpa </Link>
+        <Link to="/korpa" className='navbar-items'> Korpa    </Link>
        
         
      </div>

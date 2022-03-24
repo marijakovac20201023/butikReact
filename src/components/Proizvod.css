@@ -67,13 +67,18 @@ body {
 
  /*za str. pocetna*/
  .ponuda{
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin:9%;
-    margin-top: 10px;
-    padding: 0%;
+   
+    
+     margin-left: 9%;
+     margin-right:9%;
+     margin-top: 0;
     justify-content: space-between;
   
    }
+
+.proizvod{
+    margin-bottom: 2%;
+}

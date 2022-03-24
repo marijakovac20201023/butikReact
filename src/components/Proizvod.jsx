@@ -2,7 +2,7 @@ import React from 'react'
 import './Proizvod.css';
 function Proizvod({proizvod,dodajUKorpu}) {
   return (
-    <div><div className="height d-flex justify-content-center align-items-center">
+    <div className='proizvod'> 
     <div className="card p-3">
         <div className="d-flex justify-content-between align-items-center ">
             <div className="mt-2">
@@ -21,7 +21,7 @@ function Proizvod({proizvod,dodajUKorpu}) {
         </div>
         <p>{proizvod.opis} </p> <button className="btn btn-danger" onClick={()=>dodajUKorpu(proizvod.id)}>Add to cart</button>
     </div>
-</div></div>
+</div> 
   )
 }
 

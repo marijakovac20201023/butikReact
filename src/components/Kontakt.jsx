@@ -32,7 +32,7 @@ function Kontakt() {
       <div className="col">
         <div className="form-group">
           <label>Poruka</label>
-          <textarea id="poruka" required></textarea>
+          <textarea id="poruka" className='polje' required></textarea>
         </div>
       </div>
      

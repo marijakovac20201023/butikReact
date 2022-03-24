@@ -12,10 +12,14 @@ function Footer() {
                             </ul>
                         </div>
                         <div className="footerItemRight" > 
-                            <p>Možete nas pronaći na društvenim mrežama</p>
-                            <a href="https://www.facebook.com/" className="fa fa-facebook" target="_blank"></a>
-                            <a href="https://www.youtube.com/" className="fa fa-youtube" target="_blank"></a>
-                            <a href="https://www.instagram.com/" className="fa fa-instagram" target="_blank"></a>
+                           
+                            <ul>
+                            <strong>Možete nas pronaći na sledecim lokacijama</strong>  
+                                <li>Prvomajska 75, Zemun</li>
+                                <li>Cvijiceva 13, Novi Sad</li>
+                                <li>Kosovska 56, Nis</li>
+
+                            </ul>
                         </div>
                 
 

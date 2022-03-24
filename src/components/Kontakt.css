@@ -119,3 +119,8 @@
       width: 100%;
     }
   }
+
+
+  .polje{
+    min-height: 200px;
+  }
