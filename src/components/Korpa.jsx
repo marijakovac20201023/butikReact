@@ -1,17 +1,29 @@
-import React from 'react'
-import Proizvod from './Proizvod'
+import React, { useState } from 'react'
+ 
+import ProizvodUKorpi from './ProizvodUKorpi'
 
-function Korpa({uKorpi}) {
+function Korpa({uKorpi,ukupnaCena,dodajUKorpu, izbaciIzKorpe}) {
+  
   return (
     <div>
-        
+        {ukupnaCena==0 ? 
+            <>
+                <h3>Niste nista kupili, korpa je prazna</h3>
+            </>
+        :
+            <>
+              {uKorpi .map((p)=>(  <ProizvodUKorpi proizvod={p} key={p.id} dodajUKorpu={dodajUKorpu} izbaciIzKorpe={izbaciIzKorpe} ></ProizvodUKorpi>  ))}
+              <p>Ukupno: {ukupnaCena}</p>
+            </>
+    
+        }
          
-                    {uKorpi .map((p)=>(  <Proizvod proizvod={p} key={p.id}  ></Proizvod>  ))}
+                  
              
 
 
-
-
+    
+        
     </div>
   )
 }

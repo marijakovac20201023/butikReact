@@ -14,10 +14,12 @@ function App() {
 
   //niz proizvoda koji su u korpi
   const [uKorpi,setUKorpi] = useState([]);
+  const [ukupnaCena,setUkupnaCena] = useState(0);
   const [brProzivoda,setBrProizvoda] = useState(0);
   function osvezi(){
     let nizProizvodaUKorpi = proizvodi.filter((p) =>p.kolicina>0);
     setUKorpi(nizProizvodaUKorpi);
+    izracunajUkupnuCenu();
   }
   function dodajUKorpu(id){
         setBrProizvoda(brProzivoda+1);
@@ -31,6 +33,28 @@ function App() {
      osvezi();
     
 
+  }
+  function izbaciIzKorpe(id){
+    setBrProizvoda(brProzivoda-1);
+
+    proizvodi.forEach((p)=>{
+       
+      if(p.id===id){
+          p.kolicina--;
+      }
+    })
+ osvezi();
+
+
+}
+  function izracunajUkupnuCenu(){
+    setUkupnaCena(0)
+    proizvodi.forEach((p)=>{
+           if(p.kolicina>0){
+            setUkupnaCena(ukupnaCena+p.cena*p.kolicina)
+           }
+          
+    })
   }
   const [proizvodi]= useState([ //niz proizvoda u ponudi
         {
@@ -104,7 +128,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Pocetna proizvodi={proizvodi} dodajUKorpu={dodajUKorpu}></Pocetna>}></Route>
             <Route path="/kontakt" element={<Kontakt></Kontakt>}></Route>
-            <Route path="/korpa" element={ <Korpa uKorpi={uKorpi}></Korpa>}></Route>
+            <Route path="/korpa" element={ <Korpa uKorpi={uKorpi} ukupnaCena={ukupnaCena} dodajUKorpu={dodajUKorpu} izbaciIzKorpe={izbaciIzKorpe}></Korpa>}></Route>
         </Routes>
           <Footer> </Footer>
       </BrowserRouter>
