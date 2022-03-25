@@ -14,13 +14,16 @@ function App() {
 
   //niz proizvoda koji su u korpi
   const [uKorpi,setUKorpi] = useState([]);
-  const [ukupnaCena,setUkupnaCena] = useState(0);
+ 
   const [brProzivoda,setBrProizvoda] = useState(0);
   function osvezi(){
     
     let nizProizvodaUKorpi = proizvodi.filter((p) =>p.kolicina>0);
     setUKorpi(nizProizvodaUKorpi);
-    izracunajUkupnuCenu();
+   
+    
+     
+ 
   }
   function dodajUKorpu(id){
         setBrProizvoda(brProzivoda+1);
@@ -29,7 +32,7 @@ function App() {
            
           if(p.id===id){
               p.kolicina++;
-              p.ukupno=p.cena*p.kolicina
+               
               osvezi();
           }
         })
@@ -44,7 +47,7 @@ function App() {
        
       if(p.id===id){
           p.kolicina--;
-          p.ukupno=p.cena*p.kolicina
+          
           osvezi();
       }
     })
@@ -52,18 +55,7 @@ function App() {
 
 
 }
-  function izracunajUkupnuCenu(){
-   
-   
-    proizvodi.forEach((p)=>{
-            
-           if(p.kolicina>0){
-             
-                setUkupnaCena(ukupnaCena+p.ukupno)
-           }
-          
-    })
-  }
+ 
   const [proizvodi]= useState([ //niz proizvoda u ponudi
         {
             id:1,
@@ -74,7 +66,7 @@ function App() {
             opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
             cena: 100,
             kolicina:0, 
-            ukupno:0
+             
         },
         {
           id:2,
@@ -85,7 +77,7 @@ function App() {
           opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
           cena: 200,
           kolicina:0,
-          ukupno:0
+           
         },
         {
           id:3,
@@ -96,7 +88,7 @@ function App() {
           opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
           cena: 600,
           kolicina:0,
-          ukupno:0
+           
        },
        {
         id:4,
@@ -107,7 +99,7 @@ function App() {
         opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
         cena: 160,
         kolicina:0,
-        ukupno:0
+        
     },
     {
       id:5,
@@ -118,7 +110,7 @@ function App() {
       opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
       cena: 260,
       kolicina:0,
-      ukupno:0
+      
     },
     {
       id:6,
@@ -129,7 +121,7 @@ function App() {
       opis:"Lorem dsadsa dsa das das d as d asd a d asd as d a das sd  ads",
       cena: 170,
       kolicina:0,
-      ukupno:0
+      
    },
 
   ]);
@@ -142,7 +134,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Pocetna proizvodi={proizvodi} dodajUKorpu={dodajUKorpu}></Pocetna>}></Route>
             <Route path="/kontakt" element={<Kontakt></Kontakt>}></Route>
-            <Route path="/korpa" element={ <Korpa uKorpi={uKorpi} ukupnaCena={ukupnaCena} dodajUKorpu={dodajUKorpu} izbaciIzKorpe={izbaciIzKorpe}></Korpa>}></Route>
+            <Route path="/korpa" element={ <Korpa brProzivoda={brProzivoda} uKorpi={uKorpi}  dodajUKorpu={dodajUKorpu} izbaciIzKorpe={izbaciIzKorpe}></Korpa>}></Route>
         </Routes>
           <Footer> </Footer>
       </BrowserRouter>

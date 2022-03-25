@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import ProizvodUKorpi from './ProizvodUKorpi'
 import  {BsShop} from "react-icons/bs"
 
-function Korpa({uKorpi,ukupnaCena,dodajUKorpu, izbaciIzKorpe}) {
+function Korpa({uKorpi,brProzivoda,dodajUKorpu, izbaciIzKorpe}) {
   
   return (
     <div>
@@ -14,7 +14,7 @@ function Korpa({uKorpi,ukupnaCena,dodajUKorpu, izbaciIzKorpe}) {
          <hr />
          <br /><br /> 
         </div>
-        {ukupnaCena==0 ? 
+        {brProzivoda==0 ? 
             <>
                 <div className='praznaKorpa'>
                     <h3><strong>Niste nista kupili, korpa je prazna</strong></h3> 
@@ -26,10 +26,7 @@ function Korpa({uKorpi,ukupnaCena,dodajUKorpu, izbaciIzKorpe}) {
             <>
               {uKorpi .map((p)=>(  <ProizvodUKorpi proizvod={p} key={p.id} dodajUKorpu={dodajUKorpu} izbaciIzKorpe={izbaciIzKorpe} ></ProizvodUKorpi>  ))}
              
-                <div className='ukupno'>
                 
-                    <p><strong>Ukupno: {ukupnaCena} RSD</strong></p>
-                </div>
              
               
             </>
